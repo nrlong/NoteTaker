@@ -9,6 +9,10 @@ router.get("/notes", function(request, response) {
     // 15-HotRestaurant/Solved for more info
 });
 
+router.get("*", function (request, response){
+    response.sendFile(path.join(__dirname, "../public/index.html"));
+})
+
 
 
 module.exports = router;
